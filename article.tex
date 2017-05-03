@@ -2,7 +2,7 @@
 \usepackage{listings}
 \newcommand{\Tonnetz}{\emph{Tonnetz}}
 \newcommand{\Hamiltonian}{Hamiltonian}
-\title{The Oumupo, between music and math}
+\title{The OuMuPo, between music and math}
 \author{M Andreatta, M Granger, T Johnson and V Villenave
 (tr M Solomon)}
 \begin{document}
@@ -11,7 +11,7 @@
 What if music was, at the end of the day, an accessible, fun and expressive way to engage with math? The musicians of the OuMuPo (Ouvroir de Musique Potentielle, or The Workshop for Potential Music) lead us through this open question via different exercises and experiments.
 \end{abstract}
 
-In 1960, François le Lionnais and Raymond Queneau founded a collective whose singular objective was to reinvigorate literary forms. This collective, called the OuLiPo (Ouvroir de Littérature Potentielle, or The Workshop for Potential Literature), continues to existe today and is the source of audacious and provocative work such as Queneau’s Hundred Thousand Billion Poems and Perec’s A Void. Since the group’s inception, François Le Lionnais imagined extending the scope of this group to various other disciplines and, in this spirit, founded several OuXPo’s (Ouvroir de X Potentiel(le), or The Workshop for Potential
+In 1960, Fran{c}ois le Lionnais and Raymond Queneau founded a collective whose singular objective was to reinvigorate literary forms. This collective, called the OuLiPo (Ouvroir de Litt'{e}rature Potentielle, or The Workshop for Potential Literature), continues to exist today and is the source of audacious and provocative work such as Queneau’s Hundred Thousand Billion Poems and Perec’s A Void. Since the group’s inception, Fran{c}ois Le Lionnais imagined extending the scope of this group to various other disciplines and, in this spirit, founded several OuXPo’s (Ouvroir de X Potentiel(le), or The Workshop for Potential
 X).
 
 
@@ -34,12 +34,12 @@ often numbered with Roman Numerals or designated with letters of the
 alphabet. Since the twentieth century, it is even possible to designate a
 pitch by its periodic frequency in Hz!
 \item \textbf{relative pitch}, or the interval between a pitch and another
-one, played either disjointly or simultaneously in time. By counting the
+one, played either as distinct entities or simultaneously in time. By counting the
 number of semitones between two notes, it is possible to establish detailed
 metrics of chords and harmonies. The \Tonnetz (see below) is, in this
 line of thought, an original and interesting tool.
 \end{itemize}
-In many cases, the transation of a number or a mathematical operation
+In many cases, the translation of a number or a mathematical operation
 into musical elements.  This leads to the questioning of the \textbf{numeric
 base} being used.  While we are used to manipulating numbers in a base 10
 scheme, musical organization can be conceived in entirely different ways.
@@ -50,14 +50,14 @@ musical phrasing) or 8 (the ``count to eight'' common for dancers).
 \item The diatonic scale, an omnipresent seven-note construct in many different musical
 traditions including the Western one. The pentatonic scale, which comprises
 five notes, is found in many Eastern cultures.
-\item The chromatic scale, used since the time of Pythagorian theorists,
+\item The chromatic scale, used since the time of Pythagorean theorists,
 requires the partitioning of a musical octave in a twelve-semitone scale.
-Today, this scale is a strict geometric series (each note incrementing by a
+Today, this scale is a strict geometric series (each note incremented by a
 factor of $2^{1/12}$).
 \end{itemize}
 It is nevertheless possible to cheat through various means of musical
 cunning.  For example, a ten-note set can be derived from the twelve-note
-integrality by omitting two notes from the chromatic collection.
+space by omitting two notes from the chromatic collection.
 \section*{Melodic transformation}
 Forms such as the canon have existed for several centuries.  Numerous
 composers, including the well-known J.S. Bach, have proven that it is
@@ -66,7 +66,7 @@ simultaneously at different tempos.  With this in mind, we attempt to
 explore new melodic and polyphonic structures.  One example of this is
 self-similar melodies, meaning melodies that reproduce themselves at
 different scales.  In mathematics, this idea is encapsulated by fractals. 
-Concretely, the melody rearticulates itself by only playing one note out of
+Concretely, the melody re-articulates itself by only playing one note out of
 every \emph{n} notes.  In the most complex cases, \emph{n} can change but
 the melody remains invariant.
 \section*{Combinatorial procedures}
@@ -77,7 +77,7 @@ For example, the French word \emph{mode} can have its letters reorganized
 into \emph{d\^{o}me} or \emph{d\'{e}mo} whereas \emph{doem} or \emph{medo}
 are not words in the French lexicon.  Musical notes, on the other hand, can
 be combined in any order and carry a subjective argument in musical time.
-Several classic mathematic tools can be used to articulate musics
+Several classic mathematical tools can be used to articulate musics
 combinatorial potential: magic squares, Pascal's triangle, the Dragon
 Curve (see below) and many others.
 \section*{Attractors}
@@ -86,7 +86,7 @@ contains qualities of both structure and chaos.
 
 One interesting example of attractors in music comes from the Moscow-based
 composer Sergei Zagny (born in 1960) and is based on mathematical equations
-elaborated by the Belgian mathemetician Pierre-Fran\c{c}ois Verhulst
+elaborated by the Belgian mathematician Pierre-Fran\c{c}ois Verhulst
 (1804-1849). A variable $x$ (which must always stay between 0 and 1) is
 recursively multiplied by a factor $a$ (that can be between 0 and 4) and we
 observe the following iterative results.
@@ -108,7 +108,7 @@ Print[ct, "  ", x]]
 \end{lstlisting}
 \caption{with $a=2.6$ and $x=0.5$ as a starting point, $x$ becomes 0.65 then 0.59. 0.62. 0.61
 etc.
-until it stabalizes at 0.615385.}
+until it stabilizes at 0.615385.}
 \end{figure}
 \begin{figure}[h]
 a = 3.56994; x = 0.5; ct = 0;
@@ -130,7 +130,6 @@ close to 0.8 and the other close to 0.5.  The attractor thus becomes
 periodic.}
 \end{figure}
 \begin{figure}[h]
-En d’autres termes, les résultats tendent à s’organiser selon un cycle de quatre valeurs approximatives : tel est l’« attracteur » qui nous intéresse ici.
 a = 3.745; x = 0.5; ct = 0;
 While[ct <= 100, ct++; x = N[a*x*(1 - x)];
 Print[ct, "  ", x]]
@@ -163,14 +162,14 @@ Print[ct, "  ", x]]
 0.655782
 \caption{This configuration is less table and the numbers obtained are
 completely dispersed.  Nevertheless, if one listens to the result in time,
-one can hear an emergent logic in a random alteration between five disntinct
+one can hear an emergent logic in a random alteration between five distinct
 values.  In this way, music reveals what a base ten numerical system,
 ill-adapted to the representation of dynamic system, often obfuscates.}
 \end{figure}
 \section*{Fun in \Tonnetz-land}
-The \Tonnetz (tone-network) is a geometrical structure origianlly
+The \Tonnetz (tone-network) is a geometrical structure originally
 introduced by the mathematician Leonhard Euler (1707-1783). In a treaty
-entitled \emph{Speculum Musicum} (Musical Mirror), Euler propses a
+entitled \emph{Speculum Musicum} (Musical Mirror), Euler proposes a
 representation of musical pitch in a two-dimensional space.  The space's two
 axes are the perfect fifth (C to G, for example) and the major third (C to
 E, for example).  After the octave, these are the two most ``consonant''
@@ -178,7 +177,7 @@ intervals, meaning that their ratios can be expressed with low integer
 ratios.
 
 The \Tonnetz utilized in contemporary musical discourse divides the
-two-dimensional plane into traingles that correspond to major and minor
+two-dimensional plane into triangles that correspond to major and minor
 triadic chords.  Moving outward from the barycenter of the triangle
 (corresponding, for example, to C-E-G), one notices three major axes of
 symmetry that allow for paths through the \Tonnetz that are achieved
@@ -197,7 +196,7 @@ major chords.
 
 From this triangulation of the musical plane, one obtains a hexagonal
 lattice (a bee's nest as it were) where every note finds itself at the
-center of a hexagon surrounded by six sommets (the six notes with which it
+center of a hexagon surrounded by six summits (the six notes with which it
 can form a major chord).  By the means of the three operators \emph{R},
 \emph{P}, and \emph{L}, all of which preserve two out of three notes in a
 three-note chord and change the moving note by no more than a whole tone,
@@ -209,7 +208,7 @@ some have particularly interesting qualities.  For example, from any given
 chordal point on a hexagon in the \Tonnetz, it is possible to create a
 path that exhausts all twenty-four major and minor chords with no
 repetition.  We call this path a \emph{\Hamiltonian} traversal -- the word
-\Hamiltonian coming from an analogoues operation in graph theory.  If a path
+\Hamiltonian coming from an analogous operation in graph theory.  If a path
 is cyclic, one calls it a ``\Hamiltonian cycle.''  An exhaustive research
 shows that there are 124 \Hamiltonian cycles through the \Tonnetz that can be
 classified according to their internal symmetries.  There are, for examples,
@@ -225,14 +224,14 @@ It is worth noting that all other symmetric operations, such as \emph{PR} or
 non-\Hamiltonian cycles are shown below.
 
 The classification of chord progressions in the \Tonnetz opens up a wide
-array of possibilites in the study of musical harmonic organization.  With
+array of possibilities in the study of musical harmonic organization.  With
 respect to the OuMuPo, it gives way to new ways of writing music, especially
 in the singer-songwriter sub-genre.  \emph{\Hamiltonian Songs} are now the
 subject of concerts and workshops, and in 2016, a \Hamiltonian Cabaret,
 emceed by Fabrice Guedy, Moreno Andreatta and the singer Polo, allowed
 students of PSL (Paris Sciences et Lettres) to dive into this universe for
-an entire week.  The students created a work entiteld \emph{Ballade-Marabout}
-whose harmonic sructure is based on one of the periodic Hamiltonian cycles
+an entire week.  The students created a work entitled \emph{Ballade-Marabout}
+whose harmonic structure is based on one of the periodic Hamiltonian cycles
 discussed above.
 
 \section*{A simple musical experiment: The Dragon}
@@ -263,8 +262,8 @@ You will notice that the melody becomes more and more complex, but also more
 and more maze-like and mysterious.  The breathtaking and hypnotic beauty of
 the Dragon Curve allows one to ``hear'' mathematical constructs in exciting
 new ways.
-\section*{The conquest of Niagra: a radical approach to sound compression}
-The entire history of musical comression can be summed up in a single
+\section*{The conquest of Niagara: a radical approach to sound compression}
+The entire history of musical compression can be summed up in a single
 phrase: putting as much information as possible into the smallest space
 possible.  But why on Earth would anyone want to fill a hard drive with ten
 years of music?  No one would ever spend ten years of her life actually
@@ -295,5 +294,5 @@ proposes a superposition of twenty folk melodies -- a whopping 95\%! Pushed
 to its extreme, this logic allows one to listen to all possible music at the
 same time.  Also known as ``white noise,'' this is compression at is limit,
 as the quantity of musical information tends towards zero.  In other words,
-compression moves music towards the sound of Niagra Falls.
+compression moves music towards the sound of Niagara Falls.
 \end{document}
