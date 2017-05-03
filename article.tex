@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{listings}
 \title{The Oumupo, between music and math}
 \author{M Andreatta, M Granger, T Johnson and V Villenave
 (tr M Solomon)}
@@ -77,4 +78,27 @@ be combined in any order and carry a subjective argument in musical time.
 Several classic mathematic tools can be used to articulate musics
 combinatorial potential: magic squares, Pascal's triangle, the Dragon's
 Curve (see below) and many others.
+\section*{Attractors}
+Attractors in music are a tool used by composers looking for a music that
+contains qualities of both structure and chaos.
+
+One interesting example of attractors in music comes from the Moscow-based
+composer Sergei Zagny (born in 1960) and is based on mathematical equations
+elaborated by the Belgian mathemetician Pierre-Fran\c{c}ois Verhulst
+(1804-1849). A variable $x$ (which must always stay between 0 and 1) is
+recursively multiplied by a factor $a$ (that can be between 0 and 4) and we
+observe the following iterative results.
+
+\begin{lstlisting}
+a = 2.6; x = 0.5; ct = 0;
+While[ct <= 30, ct++; x = N[a*x*(1 - x)];
+Print[ct, "  ", x]]
+
+0.652  0.59153  0.6282324  0.6072475  0.6200956  0.6125017
+0.6170938  0.6143529 0.61600210  0.61501311  0.61560712 
+0.61525113  0.61546514  0.61533715  0.61541316 0.61536717
+0.61539518  0.61537819  0.61538820  0.61538221  0.61538622
+0.61538423 0.61538524  0.61538425  0.61538526  0.61538527
+0.61538528  0.61538529  0.61538530 0.61538531  0.615385
+\end{lstlisting}
 \end{document}
