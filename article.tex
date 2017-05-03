@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage{listings}
+\newcommand{\Tonnetz}{\emph{Tonnetz}}
+\newcommand{\Hamiltonian}{Hamiltonian}
 \title{The Oumupo, between music and math}
 \author{M Andreatta, M Granger, T Johnson and V Villenave
 (tr M Solomon)}
@@ -34,7 +36,7 @@ pitch by its periodic frequency in Hz!
 \item \textbf{relative pitch}, or the interval between a pitch and another
 one, played either disjointly or simultaneously in time. By counting the
 number of semitones between two notes, it is possible to establish detailed
-metrics of chords and harmonies. The \emph{Tonnetz} (see below) is, in this
+metrics of chords and harmonies. The \Tonnetz (see below) is, in this
 line of thought, an original and interesting tool.
 \end{itemize}
 In many cases, the transation of a number or a mathematical operation
@@ -76,7 +78,7 @@ into \emph{d\^{o}me} or \emph{d\'{e}mo} whereas \emph{doem} or \emph{medo}
 are not words in the French lexicon.  Musical notes, on the other hand, can
 be combined in any order and carry a subjective argument in musical time.
 Several classic mathematic tools can be used to articulate musics
-combinatorial potential: magic squares, Pascal's triangle, the Dragon's
+combinatorial potential: magic squares, Pascal's triangle, the Dragon
 Curve (see below) and many others.
 \section*{Attractors}
 Attractors in music are a tool used by composers looking for a music that
@@ -104,7 +106,8 @@ Print[ct, "  ", x]]
 0.61538527 0.61538528 0.61538529 0.61538530
 0.61538531 0.615385
 \end{lstlisting}
-\caption{with $a=2.6$ and $x=0.5$ as a starting point, $x$ becomes 0.65 then 0.59. 0.62. 0.61 etc.
+\caption{with $a=2.6$ and $x=0.5$ as a starting point, $x$ becomes 0.65 then 0.59. 0.62. 0.61
+etc.
 until it stabalizes at 0.615385.}
 \end{figure}
 \begin{figure}[h]
@@ -164,5 +167,96 @@ one can hear an emergent logic in a random alteration between five disntinct
 values.  In this way, music reveals what a base ten numerical system,
 ill-adapted to the representation of dynamic system, often obfuscates.}
 \end{figure}
+\section*{Fun in \Tonnetz-land}
+The \Tonnetz (tone-network) is a geometrical structure origianlly
+introduced by the mathematician Leonhard Euler (1707-1783). In a treaty
+entitled \emph{Speculum Musicum} (Musical Mirror), Euler propses a
+representation of musical pitch in a two-dimensional space.  The space's two
+axes are the perfect fifth (C to G, for example) and the major third (C to
+E, for example).  After the octave, these are the two most ``consonant''
+intervals, meaning that their ratios can be expressed with low integer
+ratios.
 
+The \Tonnetz utilized in contemporary musical discourse divides the
+two-dimensional plane into traingles that correspond to major and minor
+triadic chords.  Moving outward from the barycenter of the triangle
+(corresponding, for example, to C-E-G), one notices three major axes of
+symmetry that allow for paths through the \Tonnetz that are achieved
+by changing one chordal note by one diatonic degree.
+\begin{itemize}
+\item The \emph{relative} chord (\emph{R}) -- C-E-A in the
+above example.
+\item The \emph{parallel} chord (\emph{P}) --
+C-E$\flat$-G.
+\item The \emph{leading-tone} chord (\emph{L}) --
+B-E-G.
+\end{itemize}
+An interesting consequence of this partitioning is that major chords only
+ever lead to minor chords and, inversely, minor chords only ever lead to
+major chords.
+
+From this triangulation of the musical plane, one obtains a hexagonal
+lattice (a bee's nest as it were) where every note finds itself at the
+center of a hexagon surrounded by six sommets (the six notes with which it
+can form a major chord).  By the means of the three operators \emph{R},
+\emph{P}, and \emph{L}, all of which preserve two out of three notes in a
+three-note chord and change the moving note by no more than a whole tone,
+one can navigate through the lattice to create harmonic progressions that
+only require minimal voice-leading.
+
+Of the many different paths that can be traced through the \Tonnetz,
+some have particularly interesting qualities.  For example, from any given
+chordal point on a hexagon in the \Tonnetz, it is possible to create a
+path that exhausts all twenty-four major and minor chords with no
+repetition.  We call this path a \emph{\Hamiltonian} traversal -- the word
+\Hamiltonian coming from an analogoues operation in graph theory.  If a path
+is cyclic, one calls it a ``\Hamiltonian cycle.''  An exhaustive research
+shows that there are 124 \Hamiltonian cycles through the \Tonnetz that can be
+classified according to their internal symmetries.  There are, for examples,
+cycles that zig-zag because of two elemental symmetries within them (for
+example, alternating \emph{L} and \emph{R} operations).  Other cycles
+traverse the 24 major and minor chords without any internal symmetries.  The
+figure below inventories the 28 \Hamiltonian \Tonnetz cycles that have
+internal periodicity.  We find here, in positions 16 and 28, two zig-zag
+configurations that allows one to visit each chords once and once only.
+
+It is worth noting that all other symmetric operations, such as \emph{PR} or
+\emph{LP}, create chord progressions that are shorter than 24.  These
+non-\Hamiltonian cycles are shown below.
+
+The classification of chord progressions in the \Tonnetz opens up a wide
+array of possibilites in the study of musical harmonic organization.  With
+respect to the OuMuPo, it gives way to new ways of writing music, especially
+in the singer-songwriter sub-genre.  \emph{\Hamiltonian Songs} are now the
+subject of concerts and workshops, and in 2016, a \Hamiltonian Cabaret,
+emceed by Fabrice Guedy, Moreno Andreatta and the singer Polo, allowed
+students of PSL (Paris Sciences et Lettres) to dive into this universe for
+an entire week.  The students created a work entiteld \emph{Ballade-Marabout}
+whose harmonic sructure is based on one of the periodic Hamiltonian cycles
+discussed above.
+
+\section*{A simple musical experiment: The Dragon}
+Described by Martin Gardner in a 1967 generalist journal, the \textbf{Dragon
+Curve} is an interesting musical object that is as simple as it is
+fascinating.  While it has become a familiar and popular entry into
+mathematical concepts, few have applied this curve to the creation of a
+musical score.
+
+We all know the small game of folding a slip of paper $n$ times in the same
+direction and then unfolding the paper to see the final form.  The
+complexity of the exercise increases according to the number of folds.  This
+Dragon Curve possesses several interesting properties (fractal,
+self-similar, symmetric but non-periodic, etc.).  The curve can also be read
+as a series of melodic movements
+\begin{enumerate}
+\item Choose a scale, with a preference for non-standard scales such as C
+D$\sharp$ E F G A$\flat$ B.
+\item Fold a slip of paper twice in the same direction, then unfold it and
+lie it down flat.
+\item Play the first note of the scale, and for each ``bump'' in the paper,
+go up one note.  For each dip in the paper, go down by one note (always
+following the chosen scale).
+\item Take the slip of paper, add an extra fold, and play the new melody
+obtained by this change.
+\end{enumerate}
 \end{document}
